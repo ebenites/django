@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from pages.urls import pages_urlpatterns
 from profiles.urls import profiles_urlpatterns
+from messenger.urls import messenger_urlpatterns
 from django.conf import settings
 
 urlpatterns = [
@@ -26,6 +27,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
      # Paths de profiles
     path('profiles/', include(profiles_urlpatterns)),
+    # Paths de messenger
+    path('messenger/', include(messenger_urlpatterns)),
     # Paths de Auth
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('registration.urls')),
